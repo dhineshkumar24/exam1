@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1= "Results"
+    #users
+        - each employee in users
+          div.employee
+            div.created_at= employee.create_at
+            div.title= employee.name
+            div.name= employee.city
+        a(href="/")!= "Home"
